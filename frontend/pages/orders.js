@@ -1,7 +1,5 @@
-import Page from "../components/Page";
+import IndexPage from '../components/Page';
 
 export default function OrderPage() {
-  return <Page>
-    <p>Hello!</p>
-  </Page>
+  return <p>Hello I am the order page!</p>;
 }

@@ -1,7 +1,9 @@
-import Page from "../components/Page";
+import IndexPage from '../components/Page';
 
 export default function OrderPage() {
-  return <Page>
-    <p>Hey!</p>
-  </Page>
+  return (
+    <p>Hey I am the products page!</p>
+  );
 }
+
+
