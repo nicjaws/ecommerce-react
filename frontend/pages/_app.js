@@ -1,18 +1,17 @@
 import NProgress from 'nprogress';
-import IndexPage from '../components/Page';
-import Router from 'next/router'
-
+import Router from 'next/router';
+import Page from '../components/Page';
 
 import '../components/styles/nprogress.css';
 
-Router.events.on('routerChangeStart', () => NProgress.start());
-Router.events.on('routerChangeComplete', () => NProgress.done());
-Router.events.on('routerChangeError', () => NProgress.done());
+Router.events.on('routeChangeStart', () => NProgress.start());
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <IndexPage>
+    <Page>
       <Component {...pageProps} />
-    </IndexPage>
+    </Page>
   );
 }
