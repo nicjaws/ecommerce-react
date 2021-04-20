@@ -1,11 +1,12 @@
 import { createAuth } from '@keystone-next/auth';
-import 'dotenv/config';
 import { config, createSchema } from '@keystone-next/keystone/schema';
 import {
   withItemData,
   statelessSessions,
 } from '@keystone-next/keystone/session';
+import { Product } from './schemas/Product';
 import { User } from './schemas/User';
+import 'dotenv/config';
 
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-nico-shop-tutorial';
@@ -41,6 +42,7 @@ export default withAuth(
     lists: createSchema({
       // schema items go in here
       User,
+      Product,
     }),
     ui: {
       // todo change this gor roles
